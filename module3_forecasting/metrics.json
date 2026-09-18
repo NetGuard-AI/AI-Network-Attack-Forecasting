@@ -1,0 +1,15 @@
+{
+  "model": "XGBoost binary classifier",
+  "target": "future_attack_flag",
+  "validation_type": "chronological 80/20 split",
+  "mvp_training_rows_before_lag_drop": 200000,
+  "mvp_training_rows_after_lag_drop": 199997,
+  "train_rows": 159997,
+  "validation_rows": 40000,
+  "roc_auc": 0.9935,
+  "pr_auc": 0.9998,
+  "f1": 0.9936,
+  "precision": 0.992,
+  "recall": 0.9952,
+  "note": "Metrics are from the selected chronological MVP validation window, not a full-dataset benchmark."
+}
