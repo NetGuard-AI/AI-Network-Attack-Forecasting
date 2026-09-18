@@ -1,0 +1,10 @@
+REAL UPSTREAM ARTIFACTS REQUIRED
+
+Copy these real files into backend/artifacts/:
+- feature_schema.json (Module 1)
+- scaler.pkl (Module 1)
+- encoders.pkl (Module 1)
+- trained_model.pkl (Module 2)
+- forecast_model.pkl (Module 3)
+
+Do NOT generate placeholder/random artifacts for the MVP.
