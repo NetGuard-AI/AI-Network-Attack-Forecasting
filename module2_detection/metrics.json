@@ -1,0 +1,250 @@
+{
+  "generated_at": "2026-09-18 16:29:26",
+  "feature_count": 15,
+  "baseline_rf": {
+    "params": {
+      "n_estimators": 200,
+      "class_weight": "balanced"
+    },
+    "validation": {
+      "accuracy": 0.925,
+      "macro_f1": 0.9245,
+      "weighted_f1": 0.9245,
+      "per_class": {
+        "benign": {
+          "precision": 0.8833,
+          "recall": 0.8833,
+          "f1": 0.8833,
+          "support": 120
+        },
+        "dos": {
+          "precision": 0.9835,
+          "recall": 0.9917,
+          "f1": 0.9876,
+          "support": 120
+        },
+        "portscan": {
+          "precision": 0.928,
+          "recall": 0.9667,
+          "f1": 0.9469,
+          "support": 120
+        },
+        "bruteforce": {
+          "precision": 0.9035,
+          "recall": 0.8583,
+          "f1": 0.8803,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          106,
+          0,
+          5,
+          9
+        ],
+        [
+          1,
+          119,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          116,
+          2
+        ],
+        [
+          11,
+          2,
+          4,
+          103
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "benign",
+        "dos",
+        "portscan",
+        "bruteforce"
+      ]
+    }
+  },
+  "tuned_xgboost": {
+    "params": {
+      "max_depth": 8,
+      "n_estimators": 300,
+      "learning_rate": 0.1
+    },
+    "selection_score": 0.9437,
+    "validation": {
+      "accuracy": 0.9375,
+      "macro_f1": 0.9375,
+      "weighted_f1": 0.9375,
+      "per_class": {
+        "benign": {
+          "precision": 0.871,
+          "recall": 0.9,
+          "f1": 0.8852,
+          "support": 120
+        },
+        "dos": {
+          "precision": 0.9917,
+          "recall": 0.9917,
+          "f1": 0.9917,
+          "support": 120
+        },
+        "portscan": {
+          "precision": 0.959,
+          "recall": 0.975,
+          "f1": 0.9669,
+          "support": 120
+        },
+        "bruteforce": {
+          "precision": 0.9298,
+          "recall": 0.8833,
+          "f1": 0.906,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          108,
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          119,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          117,
+          1
+        ],
+        [
+          13,
+          1,
+          0,
+          106
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "benign",
+        "dos",
+        "portscan",
+        "bruteforce"
+      ]
+    }
+  },
+  "test": {
+    "accuracy": 0.9021,
+    "macro_f1": 0.9013,
+    "weighted_f1": 0.9013,
+    "per_class": {
+      "benign": {
+        "precision": 0.8284,
+        "recall": 0.925,
+        "f1": 0.874,
+        "support": 120
+      },
+      "dos": {
+        "precision": 0.9675,
+        "recall": 0.9917,
+        "f1": 0.9794,
+        "support": 120
+      },
+      "portscan": {
+        "precision": 0.9316,
+        "recall": 0.9083,
+        "f1": 0.9198,
+        "support": 120
+      },
+      "bruteforce": {
+        "precision": 0.8868,
+        "recall": 0.7833,
+        "f1": 0.8319,
+        "support": 120
+      }
+    },
+    "confusion_matrix": [
+      [
+        111,
+        0,
+        5,
+        4
+      ],
+      [
+        0,
+        119,
+        0,
+        1
+      ],
+      [
+        4,
+        0,
+        109,
+        7
+      ],
+      [
+        19,
+        4,
+        3,
+        94
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "benign",
+      "dos",
+      "portscan",
+      "bruteforce"
+    ]
+  },
+  "shipped_model": "tuned_xgboost",
+  "top_10_feature_importance": [
+    [
+      "feat_6",
+      0.0958
+    ],
+    [
+      "feat_9",
+      0.0855
+    ],
+    [
+      "feat_1",
+      0.0781
+    ],
+    [
+      "feat_4",
+      0.0746
+    ],
+    [
+      "feat_2",
+      0.0722
+    ],
+    [
+      "feat_10",
+      0.0678
+    ],
+    [
+      "feat_7",
+      0.0662
+    ],
+    [
+      "feat_8",
+      0.0656
+    ],
+    [
+      "feat_14",
+      0.0655
+    ],
+    [
+      "feat_3",
+      0.0603
+    ]
+  ]
+}
